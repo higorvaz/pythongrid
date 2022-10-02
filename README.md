@@ -1,4 +1,4 @@
-# pythonGrid
+# Python Grid
 
 ![Image of pythonGrid Demo](app/sample/demo.png)
 
@@ -16,11 +16,11 @@ pythonGrid is an easy way to create a fully working datagrid for Python web fram
 
 A couple quick start options are available:
 
-* [Download the latest release](https://github.com/pycr/pythongrid/archive/master.zip)
+* [Download the latest release](https://github.com/higorvaz/pythongrid/archive/master.zip)
 * Clone the repo (recommended):
 
 ```bash
-git clone https://github.com/pycr/pythongrid.git
+git clone https://github.com/higorvaz/pythongrid.git
 ```
 
 ## Files included
@@ -60,7 +60,7 @@ pythonGrid current has two main files in `grid.py` and `data.py` in **app** fold
 
 ## Creating the Database
 
-Find the sample database in folder [**sampledb**](https://github.com/pycr/pythongrid/blob/master/app/sample/). Using your favorite MySQL os Postgres client (more database supports are coming).
+Find the sample database in folder [**sampledb**](https://github.com/higorvaz/pythongrid/blob/master/app/sample/). Using your favorite MySQL os Postgres client (more database supports are coming).
 
 1. Create a new database named `sampledb`
 2. Run the sample sql script.
@@ -142,7 +142,7 @@ We have two view functions that need initialization.
 
 The file `routes.py` contains our `def index()` view functions associate with root URL `/`. This means that when a web browser requests the URL, Flask is going to invoke this function and pass the return value of it back to the browser as a response.
 
-Inside the function, it creates a new instance of the PythonGrid class and assigns this object to the local variable `grid`. Note `orders` is a table from sample database [**sampledb**](https://github.com/pycr/pythongrid/blob/master/app/sample/).
+Inside the function, it creates a new instance of the PythonGrid class and assigns this object to the local variable `grid`. Note `orders` is a table from sample database [**sampledb**](https://github.com/higorvaz/pythongrid/blob/master/app/sample/).
 
 ```python
 grid = PythonGrid('SELECT * FROM orders', 'orderNumber', 'orders')
